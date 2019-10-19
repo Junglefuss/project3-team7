@@ -1,6 +1,6 @@
 PROJECT IDEAS
 
-currency converter
+<!-- currency converter
 
 countries
 -flags
@@ -8,20 +8,21 @@ countries
 NASA
 
 - near-earth stuff
-  -asteroids
-  -carrousel
+- asteroids
+- carrousel
 
 space gazing
 draw your own constellations
 
-photo/meme/postcards
+photo/meme/postcards -->
 
 review sites
 -bars, secretbar.com
--wines
--books
 
-route tracker/planner/sharing
+<!-- -wines
+-books -->
+
+<!-- route tracker/planner/sharing
 
 dictionary/translator
 -urban
@@ -29,9 +30,9 @@ dictionary/translator
 
 growing guide- do your own farming
 
-bank locator
+bank locator -->
 
-car/house maintenance management
+car/vehicle maintenance management
 
 --
 game?
