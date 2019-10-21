@@ -3,7 +3,7 @@ const mongoose = require('../db/connection');
 const VisitorsSchema = new mongoose.Schema({
   username: String,
   email: String,
-  favorites: []
+  favorites: [{}]
 });
 
 const Visitors = mongoose.model('Visitors', VisitorsSchema);
