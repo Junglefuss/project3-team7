@@ -1,6 +1,6 @@
 const mongoose = require('../db/connection');
 
-const CommentsSchema = new mongoose.Schema({
+const CommentSchema = new mongoose.Schema({
   bar: String,
   text: String,
   user: [
@@ -11,6 +11,6 @@ const CommentsSchema = new mongoose.Schema({
   ]
 });
 
-const Comments = mongoose.model('Comments', CommentsSchema);
+const Comment = mongoose.model('Comment', CommentSchema);
 
-module.exports = Comments;
+module.exports = Comment;

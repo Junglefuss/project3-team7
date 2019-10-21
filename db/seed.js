@@ -1,7 +1,7 @@
 const mongoose = require('./connection');
 
-const Comments = require('../models/Comments');
-const Visitors = require('../models/Visitors');
+const Comments = require('../models/Comment');
+const Visitors = require('../models/Visitor');
 
 // clear the database of records using both models
 Visitors.deleteMany({}).then(() => {
