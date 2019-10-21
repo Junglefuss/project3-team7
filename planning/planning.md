@@ -36,3 +36,16 @@ car/vehicle maintenance management
 
 --
 game?
+
+User Story:
+As as...
+
+person that wants to know about the cool secret bars and restaurants nearby
+
+I want to...
+
+search and find and save my thoughts/notes/ratings
+
+So I can...
+
+remember/visit... (possibly share/recommend with others)
