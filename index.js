@@ -2,9 +2,11 @@ const express = require('express');
 const parser = require('body-parser');
 const cors = require('cors');
 const methodOverride = require('method-override');
+// const yelpApi = require('./yelp-api/yelpAPI')
 
 const visitorsController = require('./controllers/visitors');
 const commentsController = require('./controllers/comments');
+const yelpController = require('./controllers/yelps')
 
 const app = express();
 
@@ -17,7 +19,7 @@ app.use(cors());
 
 app.use('/visitors/', visitorsController);
 app.use('/comments/', commentsController);
-
+app.use('/yelps', yelpController);
 app.set('port', process.env.PORT || 3000);
 
 app.listen(app.get('port'), () => {
