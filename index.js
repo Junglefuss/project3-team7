@@ -4,6 +4,8 @@ const cors = require('cors');
 const methodOverride = require('method-override');
 
 const visitorsController = require('./controllers/visitors');
+const commentsController = require('./controllers/comments');
+
 const app = express();
 
 app.use(parser.urlencoded({ extended: true }));
@@ -13,7 +15,8 @@ app.use(methodOverride('_method'));
 app.use(cors());
 // mongoose.set('useFindAndModify', false);
 
-app.use('/', visitorsController);
+app.use('/visitors/', visitorsController);
+app.use('/comments/', commentsController);
 
 app.set('port', process.env.PORT || 3000);
 

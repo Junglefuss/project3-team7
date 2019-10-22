@@ -5,9 +5,16 @@ const router = express.Router();
 const Visitor = require('../models/Visitor');
 const Comment = require('../models/Comment');
 
+router.get('/:id', (req, res) => {
+  const commentId = req.params.id;
+  Comment.findOne({ _id: commentId }).then(comment => {
+    res.json(comment);
+  });
+});
+
 // Create new comment
-router.post('/new-comment', (req, res) => {
-  Visitor.findOne({ _id: req.body.visitor.id }).then(visitor => {
+router.post('/:id', (req, res) => {
+  Visitor.findOne({ _id: req.params.id }).then(visitor => {
     Comment.create(req.body).then(newComment => {
       visitor.favorites.push(newComment);
       visitor.save();
@@ -18,5 +25,21 @@ router.post('/new-comment', (req, res) => {
 });
 
 // Edit comment
+router.put('/:id', (req, res) => {
+  const commentId = req.params.id;
+  console.log(req.params.id);
+  Comment.findOneAndUpdate({ _id: commentId }, req.body, { new: true})
+    .then(comment => {
+      comment.bar = req.body.bar;
+      comment.text = req.body.text;
+    })
+    .then(comment => res.json(comment));
+});
 
-module.export = router;
+router.delete("/:id", (req, res) => {  
+  Comment.findOneAndDelete({ _id: req.params.id }).then(comment => {
+    res.json(comment);
+  });
+});
+
+module.exports = router;
