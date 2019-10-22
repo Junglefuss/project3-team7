@@ -48,4 +48,16 @@ search and find and save my thoughts/notes/ratings
 
 So I can...
 
-remember/visit... (possibly share/recommend with others)
+## remember/visit... (possibly share/recommend with others)
+
+To-do:
+
+backend-
+
+- create seed data json files (2x)
+-
+
+frontend-
+
+- create react app
+- map out

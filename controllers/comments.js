@@ -5,6 +5,7 @@ const router = express.Router();
 const Visitor = require('../models/Visitor');
 const Comment = require('../models/Comment');
 
+// Create new comment
 router.post('/new-comment', (req, res) => {
   Visitor.findOne({ _id: req.body.visitor.id }).then(visitor => {
     Comment.create(req.body).then(newComment => {
@@ -15,5 +16,7 @@ router.post('/new-comment', (req, res) => {
     });
   });
 });
+
+// Edit comment
 
 module.export = router;
