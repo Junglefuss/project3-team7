@@ -11,7 +11,7 @@ let yelp = new yelpApi(apiKey);
 
 router.get('/:location', (req, res) => {
     let params = [
-        { location: req.body.location,
+        { location: req.params.location,
           term: 'bars',  
           limit: 3  
         },
@@ -21,7 +21,9 @@ router.get('/:location', (req, res) => {
     yelp.query('businesses/search', params)
     .then(data => {
       // Success
-      res.json(data);
+      let obj = data;
+      obj = JSON.parse(data);
+      res.json(obj);
       console.log(data);
     })
     .catch(err => {
