@@ -24,12 +24,16 @@ router.get('/:email', (req, res) => {
 // Update existing visitor info
 router.put('/:id', (req, res) => {
   const visitorId = req.params.id;
-  Visitor.findOneAndUpdate({ _id: visitorId })
+  Visitor.findOneAndUpdate({ _id: visitorId }, req.body, { new: true })
     .then(visitor => {
       visitor.username = req.body.username;
       visitor.email = req.body.email;
+      visitor.save();
     })
-    .then(visitor => res.json(visitor));
+    .then(visitor => {
+      console.log(res);
+      res.json(visitor);
+    });
 });
 
 module.exports = router;
