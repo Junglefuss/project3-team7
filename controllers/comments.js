@@ -5,6 +5,11 @@ const router = express.Router();
 const Visitor = require('../models/Visitor');
 const Comment = require('../models/Comment');
 
+// Get all the comments
+router.get("/all-comments", (req, res) => {
+  Comment.find({}).then(comments => res.json(comments));
+})
+
 // Get comment by id
 router.get('/:id', (req, res) => {
   const commentId = req.params.id;
