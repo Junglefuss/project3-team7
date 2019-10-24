@@ -46,12 +46,14 @@ a {
   align-content: center;
   text-decoration: none;
   color: rgb(230, 230, 230);
+  padding: 5px;
 }
 
 a:hover {
   color: rgb(38, 51, 42);
   border: 0.5px solid rgb(230, 230, 230);
   padding: 5px;
+  background-color: rgb(230, 230, 230);
 }
 
 li {
