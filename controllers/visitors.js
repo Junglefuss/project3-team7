@@ -5,6 +5,11 @@ const router = express.Router();
 const Visitor = require('../models/Visitor');
 // const Comment = require('../models/Comment');
 
+// get all visitors
+router.get("/all-visitors", (req, res) => {
+  Visitor.find({}).then(visitors => res.json(visitors));
+})
+
 // Create a new visitor
 router.post('/new', (req, res) => {
   const newVisitor = req.body;
