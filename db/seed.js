@@ -19,8 +19,8 @@ Visitors.deleteMany({}).then(() => {
         bar: 'Gary Danko',
         text: 'this place is awesome',
         user: jg.id
-      }).then(bar => {
-        jg.favorites.push(bar);
+      }).then(comment => {
+        jg.comments.push(comment);
         jg.save();
         console.log('created jg:Gary Danko');
       });
@@ -45,8 +45,8 @@ Visitors.deleteMany({}).then(() => {
         bar: "Terence's Place",
         text: 'best bar ever',
         user: tm.id
-      }).then(bar => {
-        tm.favorites.push(bar);
+      }).then(comment => {
+        tm.comments.push(comment);
         tm.save();
         console.log("created tm:Terence's Place");
       });

@@ -6,6 +6,7 @@ html {
   color: rgb(230, 230, 230);
 }
 
+/* header section */
 header {
   /* background-color: rgb(202, 177, 144);  */
   background: url(../../public/images/header-bottles.png);
@@ -62,6 +63,7 @@ li {
   align-self: center;
 }
 
+/* body section */
 main {
   border: 1px solid rgb(38, 51, 42);
   border-radius: 5px;
@@ -72,6 +74,7 @@ main {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  /* background-color: yellow; */
 }
 
 div > h1 {
@@ -80,10 +83,14 @@ div > h1 {
   padding: 0 0 7px 0;
   font-family: 'Courier New', Courier, monospace;
   text-align: center;
+  width: 100%;
 }
 
 .body {
-  min-height: 500px;
+  /* min-height: 300px; */
+  /* background-color: red; */
+  display: flex;
+  justify-content: flex-start;
 }
 /* .bar {
   margin: 5px;
@@ -93,6 +100,8 @@ div > h1 {
 
 .copy {
   max-width: 20%;
+  text-align: right;
+  /* background-color: blue; */
 }
 
 .main-img > img {
@@ -100,4 +109,9 @@ div > h1 {
   float: right;
   padding: 15px;
   border-left: 0.2px solid rgb(38, 51, 42);
+}
+
+.footer {
+  color: rgb(38, 51, 42);
+  text-align: center;
 }

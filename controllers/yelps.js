@@ -9,7 +9,7 @@ let apiKey =
 let yelp = new yelpApi(apiKey);
 
 router.get('/:location', (req, res) => {
-  let params = [{ location: req.params.location, term: 'bars', limit: 3 }];
+  let params = [{ location: req.params.location, term: 'bars', limit: 25 }];
 
   // Call the endpoint
   yelp
