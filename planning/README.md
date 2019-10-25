@@ -1,12 +1,17 @@
 # Hole in the Wall (backend)
 
-An application for finding local bars and creating your own notes about them so you can find them later.
+An application for finding local bars and creating your own notes about them so you can find them later.  The backend portion provides the CRUD functionality for the database and is able to get the data from the Yelp API.
 
 ## Current Features
 
 - Users can search for bars near them by entering any location into the search bar.
 - Users can save their own bars and notes by simply entering their email (not authenticated)
 - Users can see their comments by checking back on the bars that they saved.
+
+## Backend Features
+- Create users
+- Create, read, update and delete comments
+- Retrieve API data from yelp.
 
 ## Technologies Used
 
